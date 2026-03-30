@@ -960,6 +960,17 @@ button { cursor: none; border: none; background: none; font: inherit; color: inh
   margin-bottom: 2rem;
   max-width: 420px;
 }
+.contato__email {
+  font-family: var(--font-heading);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  margin-bottom: 1.5rem;
+}
+.contato__email a {
+  color: var(--green);
+  transition: color .3s;
+}
+.contato__email a:hover { color: var(--pink); }
 .contato__social h3 {
   font-family: var(--font-heading);
   font-weight: 700; font-size: .85rem;
@@ -1050,6 +1061,72 @@ button { cursor: none; border: none; background: none; font: inherit; color: inh
 }
 .metas__path strong { color: var(--green); font-weight: 700; }
 .metas__image {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+/* --- INVESTIMENTO --- */
+.investimento {
+  padding: 8rem 0;
+  background: var(--dark);
+}
+.invest__editorial {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 4rem;
+  align-items: center;
+}
+.invest__subtitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 2rem;
+}
+.invest__table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.invest__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  font-size: .9rem;
+  color: var(--gray-light);
+  font-weight: 300;
+}
+.invest__row span:last-child {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  color: var(--white);
+  font-size: .95rem;
+}
+.invest__row--total {
+  border-bottom: none;
+  border-top: 2px solid var(--pink);
+  margin-top: .5rem;
+  padding-top: 1rem;
+}
+.invest__row--total span:first-child {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.invest__row--total span:last-child {
+  font-size: 1.4rem;
+  color: var(--green);
+  text-shadow: 0 0 12px var(--green-glow);
+}
+.invest__image {
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(255,255,255,.04);
@@ -1245,6 +1322,9 @@ body::after {
   .sobre__tele-value { font-size: 2rem; }
   .metas__editorial { grid-template-columns: 1fr; gap: 2.5rem; }
   .metas__col-img { order: -1; max-width: 400px; margin: 0 auto; }
+  .invest__editorial { grid-template-columns: 1fr; gap: 2rem; }
+  .invest__col-img { order: -1; max-width: 400px; margin: 0 auto; }
+  .investimento { padding: 5rem 0; }
 
   /* Galeria 2 columns */
   .galeria__mosaic {
