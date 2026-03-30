@@ -1209,29 +1209,25 @@ body::after {
   .nav__toggle.active span:nth-child(2) { opacity: 0; }
   .nav__toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-  /* Hero — stacked with photo on top */
+  /* Hero — fullscreen video + text only */
+  .hero__video { opacity: .25; }
+  .hero__video-overlay {
+    background:
+      linear-gradient(to bottom, rgba(6,6,6,.3) 0%, transparent 30%, transparent 50%, var(--black) 100%);
+  }
   .hero__zoom-layer {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: calc(var(--nav-h) + 1rem);
-    padding-bottom: 2rem;
-    gap: 1.5rem;
-  }
-  .hero__right {
-    display: flex;
-    order: -1;
+    padding-top: calc(var(--nav-h) + 2rem);
+    padding-bottom: 5rem;
+    gap: 0;
+    min-height: 100vh; min-height: 100dvh;
     justify-content: center;
-    padding-top: 1rem;
+    align-content: center;
   }
-  .hero__right::before { inset: -10%; opacity: .04; }
-  .hero__photo-frame {
-    width: 50vw;
-    max-width: 220px;
-  }
-  .hero__number {
-    font-size: 3.5rem;
-    bottom: -10px; right: -10px;
-  }
+  .hero__right { display: none; }
+  .hero__tag { justify-content: center; }
+  .hero__name-line { font-size: clamp(3.2rem, 13vw, 5.5rem); }
   .hero__actions { justify-content: center; }
   .hero__subtitle { margin-left: auto; margin-right: auto; }
   .heading-xl::after { margin: 0 auto; left: 0; right: 0; }
@@ -1273,12 +1269,36 @@ body::after {
   /* Performance: disable noise overlay */
   body::after { display: none; }
 
-  /* Speed lines: reduce quantity and slow down */
+  /* Speed lines: reduce on mobile */
   .hero__speed-lines span { animation-duration: 4s; }
   .hero__speed-lines span:nth-child(n+5) { display: none; }
 
-  /* Video: hide on mobile for performance */
-  .hero__video-wrap { display: none; }
+  /* Tire tracks: hide on mobile */
+  .tire-track { display: none; }
+
+  /* Sobre — mobile editorial */
+  .sobre__image-frame { transform: rotate(0deg); }
+  .sobre__col-text { text-align: center; }
+  .sobre__col-text h2::after { left: 50%; transform: translateX(-50%); }
+  .sobre__lead { text-align: center; }
+  .sobre__col-text p { text-align: center; margin-left: auto; margin-right: auto; }
+  .sobre__telemetry { justify-content: center; }
+
+  /* Metas — mobile */
+  .metas__col-text { text-align: center; }
+  .metas__col-text h2::after { left: 50%; transform: translateX(-50%); }
+  .metas__lead { text-align: center; }
+
+  /* Contato — mobile */
+  .contato__info { text-align: center; }
+  .contato__info h2::after { left: 50%; transform: translateX(-50%); }
+  .contato__info p { margin-left: auto; margin-right: auto; }
+  .contato__info .btn { width: 100%; justify-content: center; }
+  .contato__social { text-align: center; }
+  .contato__social h3 { text-align: center; }
+
+  /* Sponsors — mobile */
+  .sponsors__partners { border: none; }
 
   /* Footer */
   .footer__inner { flex-direction: column; gap: .8rem; text-align: center; }
@@ -1287,23 +1307,23 @@ body::after {
 /* --- PHONE (≤480px) --- */
 @media (max-width: 480px) {
   .heading-xl { font-size: clamp(2rem, 10vw, 3rem); }
-  .hero__name-line { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .hero__name-line { font-size: clamp(2.5rem, 11vw, 3.5rem); }
   .hero__name-line--stroke { -webkit-text-stroke-width: 1.5px; }
-  .hero__photo-frame { width: 45vw; max-width: 180px; }
-  .hero__number { font-size: 3rem; bottom: -8px; right: -8px; }
   .hero__actions { flex-direction: column; }
   .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__subtitle { font-size: .95rem; }
 
   .skew-section::before, .skew-section::after { height: 30px; }
   .skew-section::before { top: -15px; }
   .skew-section::after { bottom: -15px; }
   .skew-section { padding: 5rem 0 4rem; }
 
-  .sobre__telemetry { flex-direction: column; gap: 1.2rem; }
+  .sobre__telemetry { flex-direction: row; gap: 1rem; flex-wrap: wrap; }
+  .sobre__tele-value { font-size: 1.8rem; }
   .sobre__float-card { bottom: -10px; right: 0; padding: .8rem 1rem; }
   .sobre__float-label { font-size: .75rem; }
   .sobre__float-number { font-size: 1.6rem; }
-  .sobre__col-img { max-width: 85vw; }
+  .sobre__col-img { max-width: 75vw; }
 
   .carreira__card {
     flex: 0 0 85vw;
@@ -1312,14 +1332,20 @@ body::after {
   .carreira__card-year { font-size: 2.2rem; }
 
   .galeria__mosaic {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+    gap: .5rem;
   }
-  .galeria__item:nth-child(1),
+  .galeria__item:nth-child(1) { grid-column: span 2; grid-row: span 1; height: 220px; }
   .galeria__item:nth-child(4),
   .galeria__item:nth-child(6) { grid-column: span 1; }
 
-  .sponsors__grid { grid-template-columns: 1fr 1fr; }
-  .sponsors__slot { aspect-ratio: 3/2; }
   .sponsors__subtitle { font-size: .9rem; }
+
+  .metas__path { padding: 1rem; }
+  .metas__path p { font-size: .85rem; }
+
+  .contato__wrapper { padding: 5rem 0; }
+
+  .nav__logo-img { height: 44px; }
 }
