@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabelly Melniski — Piloto #04</title>
+  <meta name="description" content="Isabelly Melniski Ferreira, piloto #04. Campeã Brasileira FIA Girls on Track 2025. Acelerando com o futuro do automobilismo brasileiro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@400;600;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- LOADER — RPM GAUGE -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__rpm">
+      <svg viewBox="0 0 200 200" class="loader__gauge">
+        <circle cx="100" cy="100" r="80" class="loader__track"/>
+        <circle cx="100" cy="100" r="80" class="loader__fill"/>
+      </svg>
+      <div class="loader__needle"></div>
+      <span class="loader__value">0</span>
+    </div>
+    <img src="assets/img/logo-isa.png" alt="ISA Melniski 04" class="loader__logo">
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">
+      <img src="assets/img/logo-isa.png" alt="ISA Melniski 04" class="nav__logo-img">
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#carreira">Carreira</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#parceiros">Parceiros</a></li>
+      <li><a href="#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- SPOTLIGHT OVERLAY -->
+  <div class="spotlight" id="spotlight"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="tire-track tire-track--right" aria-hidden="true"></div>
+    <div class="hero__zoom-layer" id="heroZoom">
+      <div class="hero__left">
+        <div class="hero__tag">
+          <span class="hero__tag-line"></span>
+          <span class="hero__tag-text">Piloto #04</span>
+        </div>
+        <h1 class="hero__name" id="glitchName">
+          <span class="hero__name-line" data-text="ISABELLY">ISABELLY</span>
+          <span class="hero__name-line hero__name-line--stroke" data-text="MELNISKI">MELNISKI</span>
+        </h1>
+        <p class="hero__subtitle">Acelerando com o futuro<br>do automobilismo brasileiro.</p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--primary">
+            <span>Fale Comigo</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#carreira" class="btn btn--ghost">Minha Trajetória</a>
+        </div>
+      </div>
+      <div class="hero__right">
+        <div class="hero__photo-frame">
+          <img src="assets/img/hero-principal.jpg" alt="Isabelly Melniski - Piloto de Kart #04" class="hero__photo" loading="eager" fetchpriority="high">
+          <div class="hero__number" aria-hidden="true">04</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__speed-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="skew-section">
+      <div class="tire-track tire-track--left" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-tag">
+          <span class="section-tag__number">01</span>
+          <span class="section-tag__line"></span>
+          <span class="section-tag__text">Quem é a Isa</span>
+        </div>
+        <div class="sobre__editorial">
+          <div class="sobre__col-img reveal">
+            <div class="sobre__image-frame">
+              <img src="assets/img/quem-e.jpg" alt="Isabelly Melniski - Evolução na carreira" class="sobre__image" loading="lazy" decoding="async">
+            </div>
+            <div class="sobre__float-card">
+              <span class="sobre__float-number">13</span>
+              <span class="sobre__float-label">Anos de idade</span>
+            </div>
+          </div>
+          <div class="sobre__col-text reveal">
+            <h2 class="heading-xl">A PRÓXIMA<br><span class="accent">GERAÇÃO</span></h2>
+            <p class="sobre__lead">Isabelly Melniski Ferreira, 13 anos, piloto de kart profissional e uma das promessas do automobilismo nacional.</p>
+            <p>Entrou no mundo das pistas aos 8 anos, acompanhando o pai em campeonatos de Rental Kart. Logo se apaixonou pela velocidade e, aos 9 anos, viveu sua primeira experiência no kart indoor — foi ali que tudo começou. Hoje, em menos de quatro anos no kartismo profissional, vem conquistando pódios e se destacando como referência de empoderamento feminino no esporte.</p>
+            <div class="sobre__telemetry">
+              <div class="sobre__tele-item">
+                <span class="sobre__tele-value" data-count="40">0</span>
+                <span class="sobre__tele-unit">+</span>
+                <span class="sobre__tele-label">Pódios</span>
+              </div>
+              <div class="sobre__tele-item">
+                <span class="sobre__tele-value" data-count="6">0</span>
+                <span class="sobre__tele-unit">x</span>
+                <span class="sobre__tele-label">Pole Positions</span>
+              </div>
+              <div class="sobre__tele-item">
+                <span class="sobre__tele-value" data-count="4">0</span>
+                <span class="sobre__tele-unit">#</span>
+                <span class="sobre__tele-label">Número</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARREIRA -->
+  <section class="carreira" id="carreira">
+    <div class="container">
+      <div class="section-tag">
+        <span class="section-tag__number">02</span>
+        <span class="section-tag__line"></span>
+        <span class="section-tag__text">Conquistas</span>
+      </div>
+      <h2 class="heading-xl carreira__title reveal">TRAJETÓRIA<br><span class="accent">NA PISTA</span></h2>
+    </div>
+    <div class="carreira__track">
+      <div class="carreira__rail" id="carreiraRail">
+        <div class="carreira__card">
+          <div class="carreira__card-year">2025</div>
+          <div class="carreira__card-content">
+            <span class="carreira__card-badge">DESTAQUE</span>
+            <h3>Campeã Brasileira FIA Girls on Track</h3>
+            <p>Grande campeã do programa da FIA que promove a igualdade de gênero no automobilismo mundial.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+        <div class="carreira__card">
+          <div class="carreira__card-year">2025</div>
+          <div class="carreira__card-content">
+            <span class="carreira__card-badge">CAMPEÃ</span>
+            <h3>Campeã Paulista V11CUP F4 Light</h3>
+            <p>Título paulista na categoria F4 Light, consolidando a transição para categorias superiores.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+        <div class="carreira__card">
+          <div class="carreira__card-year">2024</div>
+          <div class="carreira__card-content">
+            <h3>3ª Colocada FIA Girls on Track</h3>
+            <p>Primeira participação no programa da FIA já com pódio. Destaque entre as pilotas do Brasil.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+        <div class="carreira__card">
+          <div class="carreira__card-year">2024</div>
+          <div class="carreira__card-content">
+            <h3>6ª Open Brasileiro Mini 2T</h3>
+            <p>Competindo contra os melhores do Brasil na categoria Mini 2 Tempos.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+        <div class="carreira__card">
+          <div class="carreira__card-year">2024</div>
+          <div class="carreira__card-content">
+            <h3>3ª Camp. Paulista V11CUP Mini 2T</h3>
+            <p>Pódio no Campeonato Paulista, mostrando consistência e evolução constante.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+        <div class="carreira__card">
+          <div class="carreira__card-year">2021</div>
+          <div class="carreira__card-content">
+            <h3>Início no Kart Profissional</h3>
+            <p>Aos 9 anos, primeira experiência no kart indoor. O começo da jornada nas pistas.</p>
+          </div>
+          <div class="carreira__card-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="skew-section skew-section--alt">
+      <div class="tire-track tire-track--diagonal" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-tag">
+          <span class="section-tag__number">03</span>
+          <span class="section-tag__line"></span>
+          <span class="section-tag__text">Galeria</span>
+        </div>
+        <h2 class="heading-xl galeria__title reveal">MOMENTOS<br><span class="accent">NA PISTA</span></h2>
+      </div>
+      <div class="galeria__mosaic container">
+        <div class="galeria__item galeria__item--tall reveal">
+          <img src="assets/img/bio-conquistas.jpg" alt="Isabelly no kart - conquistas" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+        <div class="galeria__item reveal">
+          <img src="assets/img/resultados.jpg" alt="Resultados e pódios" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+        <div class="galeria__item reveal">
+          <img src="assets/img/porta-entrada.jpg" alt="Kart - porta de entrada para F1" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+        <div class="galeria__item galeria__item--wide reveal">
+          <img src="assets/img/talento.jpg" alt="O talento está aí" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+        <div class="galeria__item reveal">
+          <img src="assets/img/fia-girls.jpg" alt="FIA Girls on Track" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+        <div class="galeria__item reveal">
+          <img src="assets/img/projecao.jpg" alt="Projeção para o futuro" class="galeria__img" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section class="sponsors" id="parceiros">
+    <div class="container">
+      <div class="section-tag">
+        <span class="section-tag__number">04</span>
+        <span class="section-tag__line"></span>
+        <span class="section-tag__text">Parceiros</span>
+      </div>
+      <h2 class="heading-xl sponsors__title reveal">QUEM ACELERA<br><span class="accent">COM A ISA</span></h2>
+      <p class="sponsors__subtitle reveal">Marcas que acreditam no talento e investem no futuro do automobilismo brasileiro.</p>
+      <div class="sponsors__partners reveal">
+        <img src="assets/img/parceiros.jpg" alt="Parceiros - AutoShopping, Unimed, Santo Sorriso, Tempermax, Copbor, DKR, V11 Kart, Grupo Csaco, Centro Britânico, IB Kart, Empower, ROH e mais" class="sponsors__partners-img" loading="lazy" decoding="async">
+      </div>
+      <a href="#contato" class="btn btn--primary sponsors__cta reveal">Seja um Parceiro</a>
+    </div>
+  </section>
+
+  <!-- METAS -->
+  <section class="metas" id="metas">
+    <div class="skew-section">
+      <div class="tire-track tire-track--left" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-tag">
+          <span class="section-tag__number">05</span>
+          <span class="section-tag__line"></span>
+          <span class="section-tag__text">Projetos</span>
+        </div>
+        <div class="metas__editorial">
+          <div class="metas__col-text reveal">
+            <h2 class="heading-xl">PROJETOS E<br><span class="accent">METAS</span></h2>
+            <p class="metas__lead">O investimento de hoje em Isabelly representa um posicionamento de longo prazo: ela tem idade, talento e estrutura para crescer — e com isso, sua marca patrocinadora cresce junto.</p>
+            <div class="metas__paths">
+              <div class="metas__path">
+                <h3><span class="accent">Plano A</span></h3>
+                <p>Kart Infantil → Kart Graduado → Fórmula Delta → <strong>Fórmula 4 Brasil</strong></p>
+              </div>
+              <div class="metas__path">
+                <h3><span class="accent">Plano B</span></h3>
+                <p>HB20 → AMG CUB → NASCAR Brasil → <strong>StockCar</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="metas__col-img reveal">
+            <img src="assets/img/metas.jpg" alt="Projetos e Metas - Plano A e B" class="metas__image" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container contato__wrapper">
+      <div class="section-tag">
+        <span class="section-tag__number">06</span>
+        <span class="section-tag__line"></span>
+        <span class="section-tag__text">Contato</span>
+      </div>
+      <div class="contato__split">
+        <div class="contato__info reveal">
+          <h2 class="heading-xl">VAMOS<br><span class="accent">ACELERAR JUNTOS?</span></h2>
+          <p>Se você deseja colocar sua marca na pista, conectar-se com o público automotivo e jovem, e apoiar uma atleta de futuro, entre em contato agora pelo WhatsApp.</p>
+          <a href="https://api.whatsapp.com/send?phone=5511970321190" target="_blank" rel="noopener" class="btn btn--whatsapp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.52 5.857L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.93 0-3.72-.51-5.28-1.4l-.378-.224-3.918 1.022 1.044-3.797-.25-.394A9.78 9.78 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="contato__social reveal">
+          <h3>Redes Sociais</h3>
+          <div class="contato__social-links">
+            <a href="https://instagram.com/isabelly_melniski" class="contato__social-link" target="_blank" rel="noopener">
+              <span class="contato__social-idx">01</span>
+              Instagram
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="#" class="contato__social-link" target="_blank" rel="noopener">
+              <span class="contato__social-idx">02</span>
+              YouTube
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="#" class="contato__social-link" target="_blank" rel="noopener">
+              <span class="contato__social-idx">03</span>
+              TikTok
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/img/logo-isa.png" alt="ISA Melniski 04" class="footer__logo-img">
+      <span class="footer__copy">&copy; 2026 Isabelly Melniski. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
